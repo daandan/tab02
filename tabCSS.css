@@ -1,0 +1,48 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background: #323232;
+}
+#outer{
+    width: 250px;
+    margin: 20px auto;
+    text-align: center;
+}
+.nav{
+    height: 25px;
+}
+.nav li{
+    margin-right: 5px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    background-color: #767676;
+    float: left;
+    list-style: none;
+    padding: 0px 20px;
+    border-radius: 5px 5px 0 0 ;
+    color:white;
+    cursor: pointer;
+}
+.nav .actived{
+    background-color: #fff;
+    color: #767676;
+}
+#inner{
+    height: 300px;
+}
+#inner div{
+    width: 250px;
+    display: none;
+    background: #fff;
+    padding: 5px;
+    position:absolute;
+}
+#inner .current{
+    display: block;
+}
+img{
+    width: 250px;
+}

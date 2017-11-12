@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>面向过程的选项卡</title>
+    <link rel="stylesheet" href="tabCSS.css"/>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="tab_jQuery.js"></script>
+</head>
+<body>
+
+<!--
+将参数配置到节点上的作用
+仿easyUI 风格。
+这种方式可以将控件封装好之后，交给完全不懂js的前端UI去做
+开发，这样他们只要在HTML里面配置控件的属性 就能实现不同的显
+示和交互效果了。几乎不需要js的知识。-->
+<div id="outer" class = "outer" data-config = '{
+                "triggerType":"click",
+                "effect":"fade",
+                "invoke":2,
+                "auto":3000
+            }'>
+    <ul id="nav" class="nav">
+        <li class="actived">猫</li>
+        <li>狗</li>
+        <li>兔子</li>
+    </ul>
+    <div id="inner" class="inner">
+        <div class="img-item current">
+            <img src="img/cat.jpg" alt="猫"/>
+        </div>
+        <div class="img-item">
+            <img src="img/dog.jpg" alt="狗"/>
+        </div>
+        <div class="img-item">
+            <img src="img/rabbit.jpg" alt="兔子"/>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        /*var tab = new Tab($("#outer").eq(0)); //获取参数的值*/
+
+        /*Tab.init($(".outer"));*/
+
+        $(".outer").tab();
+    });
+</script>
+
+</body>
+</html>
